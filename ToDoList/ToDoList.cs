@@ -35,6 +35,12 @@ namespace ToDoListNS {
             tasks.Remove(description);
             return task;
         }
+        public List<Task> removeAllTasks(List<Task> allTasks){
+            //List<Task> allTasks = new List<Task>();
+            allTasks.Clear();
+            return allTasks;
+        }
+
         public List<Task> getAllTasks() {
             List<Task> allTasks = new List<Task>();
             allTasks.AddRange(tasks.Values);

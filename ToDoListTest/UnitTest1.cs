@@ -76,6 +76,18 @@ namespace ToDoListTest
         }
 
         [TestMethod]
+        public void testRemoveAllTasks()
+        {
+            Assert.IsNotNull(todoList);
+            todoList.addTask(task1);
+            todoList.addTask(task2);
+            todoList.addTask(task3);
+            List<Task> tasks = todoList.getAllTasks();
+            todoList.removeAllTasks(tasks);
+            Assert.AreEqual(0, tasks.Count);
+        }
+
+        [TestMethod]
         public void testGetCompletedTasks()
         {
             task1.IsComplete = true;
